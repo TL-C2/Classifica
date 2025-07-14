@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classifica Squadre - Contratti Chiusi</title>
@@ -507,9 +504,9 @@
         // Dati iniziali delle squadre (ora con 10 partecipanti) - tutti partono da 0
         const teams = {
             A: [
-                { name: "Sodano Sara", contracts: 0 },
-                { name: "D'urso Antonietta", contracts: 0 },
-                { name: "Alfieri Martina", contracts: 0 },
+                { name: "Sodano Sara", contracts: 2 },
+                { name: "D'urso Antonietta", contracts: 1 },
+                { name: "Alfieri Martina", contracts: 1 },
                 { name: "Merolla Vincenza", contracts: 0 },
                 { name: "Cozzuto Maria", contracts: 0 },
                 { name: "Balestrieri Sabrina", contracts: 0 },
@@ -534,7 +531,7 @@
 
         let teamNames = {
             A: "🔴 Team Baddies",
-            B: "🟢 Squadra B"
+            B: "🟢 Team Angels"
         };
 
         // Funzione per inizializzare la pagina
@@ -848,19 +845,5 @@
         // Aggiornamenti automatici DISABILITATI - solo controllo manuale
         // setInterval(simulateRandomUpdate, 12000);
     </script>
-<script>
-  const firebaseConfig = {
-    apiKey: "INSERISCI_API_KEY",
-    authDomain: "INSERISCI_PROJECT_ID.firebaseapp.com",
-    databaseURL: https://classifica-c2-default-rtdb.europe-west1.firebasedatabase.app/,
-    projectId: "INSERISCI_PROJECT_ID",
-    storageBucket: "INSERISCI_PROJECT_ID.appspot.com",
-    messagingSenderId: "INSERISCI_SENDER_ID",
-    appId: "INSERISCI_APP_ID"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
 </body>
 </html>
