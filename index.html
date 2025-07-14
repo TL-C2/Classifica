@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classifica Squadre - Contratti Chiusi</title>
@@ -845,5 +848,19 @@
         // Aggiornamenti automatici DISABILITATI - solo controllo manuale
         // setInterval(simulateRandomUpdate, 12000);
     </script>
+<script>
+  const firebaseConfig = {
+    apiKey: "INSERISCI_API_KEY",
+    authDomain: "INSERISCI_PROJECT_ID.firebaseapp.com",
+    databaseURL: https://classifica-c2-default-rtdb.europe-west1.firebasedatabase.app/,
+    projectId: "INSERISCI_PROJECT_ID",
+    storageBucket: "INSERISCI_PROJECT_ID.appspot.com",
+    messagingSenderId: "INSERISCI_SENDER_ID",
+    appId: "INSERISCI_APP_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
 </body>
 </html>
