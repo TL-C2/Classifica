@@ -845,5 +845,30 @@
         // Aggiornamenti automatici DISABILITATI - solo controllo manuale
         // setInterval(simulateRandomUpdate, 12000);
     </script>
+<script>
+function aggiornaClassifica() {
+  fetch(https://script.google.com/macros/s/AKfycbwcByI0P1NQhMIdkVvGfoWS2GasKGCyOOR1E0wlrTWWMMfghQ4sOrzi032jEmYbaFcskw/exec, {
+    method: "POST",
+    body: JSON.stringify({
+      nome: document.getElementById("nome").value,
+      punteggio: document.getElementById("punteggio").value
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert("Classifica aggiornata!");
+  })
+  .catch(error => {
+    console.error("Errore:", error);
+    alert("Si è verificato un errore.");
+  });
+}
+</script>
+<input id="nome" placeholder="Nome">
+<input id="punteggio" placeholder="Punteggio">
+<button onclick="aggiornaClassifica()">Aggiorna</button>
 </body>
 </html>
